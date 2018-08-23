@@ -16,7 +16,7 @@ int main(int argc, char **argv) {
 	srand(time(NULL));
 	int i;
 	for (i = 0; i < char_c; i++)
-		printf("%c", (rand() % 94) + 33);
+		printf("%c", rand() % 94 + 33);
 	printf("\n");
 	
 	return 0;
