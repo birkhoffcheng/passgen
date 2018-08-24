@@ -18,6 +18,6 @@ int main(int argc, char **argv) {
 	for (i = 0; i < char_c; i++)
 		printf("%c", rand() % 94 + 33);
 	printf("\n");
-	
 	return 0;
+	
 }
