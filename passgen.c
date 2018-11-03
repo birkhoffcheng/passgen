@@ -3,13 +3,12 @@
 #include <time.h>
 
 int main(int argc, char **argv) {
-	int char_c;
 	if (argc != 2) {
 		fprintf(stderr, "Usage: %s <length of password>\n", argv[0]);
 		return 1;
 	}
 
-	char_c = atoi(argv[1]);
+	int char_c = atoi(argv[1]);
 	if (char_c < 1) {
 		fprintf(stderr, "[\033[31m!\033[0m] Length must be a positive integer!\n");
 		return 1;
