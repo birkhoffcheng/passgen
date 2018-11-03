@@ -1,10 +1,10 @@
 # Simple Password Generator
-A simple password generator that is slightly better than base64 encoded random numbers.
 
 ## Usage
 ```
-gcc -o passgen passgen.c
-./passgen <length of password>
+git clone https://github.com/birkhoffcheng/passgen.git
+cd passgen
+make
+sudo make install
+passgen <length of password>
 ```
-
-With no argument, a password of length 16 is generated.
