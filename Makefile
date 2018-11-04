@@ -8,5 +8,8 @@ passgen: passgen.c
 install: passgen
 	cp passgen /usr/bin
 
+uninstall: passgen
+	rm /usr/bin/passgen
+
 clean:
 	rm -rf passgen
