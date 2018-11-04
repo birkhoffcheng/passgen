@@ -9,7 +9,7 @@ install: passgen
 	cp passgen /usr/bin
 
 uninstall: /usr/bin/passgen
-	rm -rf /usr/bin/passgen
+	rm -f /usr/bin/passgen
 
 clean:
 	rm -rf passgen
