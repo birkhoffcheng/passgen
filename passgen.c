@@ -7,12 +7,12 @@ int main(int argc, char **argv) {
 		return 1;
 	}
 	unsigned int num_char = atoi(argv[1]);
-	unsigned int rand;
+	unsigned int random;
 	FILE *fp = fopen("/dev/urandom", "rb");
 	unsigned int i;
 	for (i = 0; i < num_char; i++) {
-		fread(&rand, sizeof(rand), 1, fp);
-		printf("%c", rand % 94 + 33);
+		fread(&random, sizeof(random), 1, fp);
+		printf("%c", random % 94 + 33);
 	}
 	printf("\n");
 	fclose(fp);
