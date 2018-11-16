@@ -8,7 +8,7 @@ int main(int argc, char **argv) {
 	}
 	unsigned int num_char = atoi(argv[1]);
 	unsigned int seed;
-	FILE *fp = fopen("/dev/urandom", "r");
+	FILE *fp = fopen("/dev/urandom", "rb");
 	fread(&seed, sizeof(seed), 1, fp);
 	fclose(fp);
 	srand(seed);
