@@ -6,7 +6,11 @@ int main(int argc, char **argv) {
 		fprintf(stderr, "Usage: %s <length of password>\n", argv[0]);
 		return 1;
 	}
-	unsigned int num_char = atoi(argv[1]);
+	int num_char = atoi(argv[1]);
+	if (num_char < 0) {
+		fprintf(stderr, "Usage: %s <length of password>\n", argv[0]);
+		return 1;
+	}
 	unsigned int random;
 	FILE *fp = fopen("/dev/urandom", "rb");
 	unsigned int i;
