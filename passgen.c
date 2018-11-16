@@ -7,7 +7,7 @@ int main(int argc, char **argv) {
 		return 1;
 	}
 	int num_char = atoi(argv[1]);
-	if (num_char < 0) {
+	if (num_char <= 0) {
 		fprintf(stderr, "Usage: %s <length of password>\n", argv[0]);
 		return 1;
 	}
