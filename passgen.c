@@ -7,15 +7,14 @@ int main(int argc, char **argv) {
 		return 1;
 	}
 	unsigned int num_char = atoi(argv[1]);
-	unsigned int seed;
+	unsigned int rand;
 	FILE *fp = fopen("/dev/urandom", "rb");
-	fread(&seed, sizeof(seed), 1, fp);
-	fclose(fp);
-	srand(seed);
 	unsigned int i;
 	for (i = 0; i < num_char; i++) {
-		printf("%c", rand() % 94 + 33);
+		fread(&rand, sizeof(rand), 1, fp);
+		printf("%c", rand % 94 + 33);
 	}
 	printf("\n");
+	fclose(fp);
 	return 0;
 }
