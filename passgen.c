@@ -11,9 +11,8 @@ int main(int argc, char **argv) {
 		fprintf(stderr, "Usage: %s <length of password>\n", argv[0]);
 		return 1;
 	}
-	unsigned int random;
+	unsigned int random, i;
 	FILE *fp = fopen("/dev/urandom", "rb");
-	unsigned int i;
 	for (i = 0; i < num_char; i++) {
 		fread(&random, sizeof(random), 1, fp);
 		printf("%c", random % 94 + 33);
